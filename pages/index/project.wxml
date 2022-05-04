@@ -1,0 +1,20 @@
+<view class="main">
+      <view class="main__item" wx:for="{{searchList ? searchList:project}}" wx:key="id">
+        <view class="main__item__img">
+          <image src="{{item.imgUrl}}"></image>
+        </view>
+        <view class="main__item__content">
+          <view class="main__item__content__title">{{item.title}}</view>
+          <view class="main__item__content__msg">
+            <view wx:if="{{!item.promotion}}">￥{{item.price}}</view>
+            <view wx:if="{{item.promotion}}" class="price">￥{{item.price}}</view>
+            <view wx:if="{{item.promotion}}" class="notice">{{item.notice}}
+            </view>
+            <view class="level">{{item.level}}</view>
+            <view class="sales">
+              <image src="../../resources/index页面/user.png"></image>{{item.sales}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>

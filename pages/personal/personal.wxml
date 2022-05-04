@@ -1,0 +1,23 @@
+<view class="personalHeader">
+  <view class="personalHeader__item">
+    <view class="personalHeader__img">
+      <image src="https://img4.mukewang.com/5458458d000181e402200220-370-370.jpg"></image>
+    </view>
+    <view class="personalHeader__content">
+      <view class="userName">Lqsssssss</view>
+      <view class="userMsg">
+        <text>学时: 1000小时         </text>
+        <text>       经验: 100000000</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="personalMain">
+  <view class="personalMain__item" wx:for="{{personal}}" wx:key="imgUrl"
+  >
+    <view class="personalMain__item__img">
+      <image src="{{item.imgUrl}}"></image>
+    </view>
+    <view class="personalMain__item__content {{index === 7 ? 'ljp':''}}">{{item.title}}</view>
+  </view>
+</view>

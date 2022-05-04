@@ -1,0 +1,143 @@
+.tpshadow {
+  height: 4rpx;
+  box-shadow: 0 8rpx 8rpx rgba(0, 0, 0, 0.2);
+}
+
+/* main */
+.main {
+  padding: 40rpx 0;
+}
+
+.main__item {
+  position: relative;
+  margin-bottom: 34rpx;
+  width: 118.1%;
+  height: 136rpx;
+  background: #fff;
+}
+
+movable-area {
+  width: 112%;
+  height: 136rpx;
+}
+
+movable-view {
+  width: 112%;
+  height: 136rpx;
+}
+
+/* 选择success */
+.main__item__check {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 136rpx;
+  height: 136rpx;
+}
+
+.qq {
+  position: relative;
+  width: 60rpx;
+  height: 60rpx;
+  border: 1rpx solid #d4d4d4;
+  border-radius: 50%;
+}
+
+
+/* 图片和文字 */
+.main__item__img {
+  float: left;
+  height: 136rpx;
+}
+
+.main__item .main__item__img image {
+  margin-right: 24rpx;
+  width: 208rpx;
+  height: 136rpx;
+  border-radius: 12rpx;
+}
+
+.main__item__content {
+  float: left;
+  margin-right: 20rpx;
+  padding: 14rpx 0 0 0;
+  width: 33%;
+}
+
+.main__item__content__title {
+  margin-bottom: 14rpx;
+  font-weight: 700;
+  font-size: 28rpx;
+  color: #2B333B;
+}
+
+.main__item__content__msg {
+  display: flex;
+  align-items: center;
+  height: 32rpx;
+  font-size: 24rpx;
+  font-weight: 700;
+  color: #71777D;
+}
+
+.main__item__content__msg view {
+  margin-right: 24rpx;
+}
+.price{
+  color:red;
+}
+.empty {
+  margin: 60rpx auto;
+  text-align: center;
+  color: red;
+}
+
+.main__item__del {
+  float: left;
+  width: 104rpx;
+  height: 136rpx;
+  line-height: 136rpx;
+  text-align: center;
+  font-size: 24rpx;
+  font-weight: 700;
+  color: white;
+  background: red;
+}
+
+.settlement__check {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 186rpx;
+  height: 136rpx;
+}
+
+.settlement {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+}
+
+.allCheck {
+  margin-left: 10rpx;
+  font-size: 30rpx;
+  color: #838383;
+}
+.total{
+  font-size: 35rpx;
+}
+.settlementBtn {
+  position: absolute;
+  right: 0;
+  box-sizing: border-box;
+  padding: 25rpx 60rpx;
+  height: 100%;
+  color: white;
+  background: red;
+  font-size: 35rpx;
+}

@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="header">
+  <input type="text" class="header__input" placeholder="AngularJS · MySQL · Java" placeholder-class="header__input--pclass" bindinput="handleSearchShow" />
+  <icon wx:if="{{searchShow}}" type="search" class="header__search" size="18" />
+</view>
+<view class="topNavigation">
+  <view class="topNavigation__item {{pageIndex===item.index?'topNavigation__item--active':''}}" wx:for="{{topNavigation}}" wx:key="imgUrl" data-type="{{item.type}}" data-index="{{item.index}}" bindtap="handleUnlineShow">
+    <image src="{{item.imgUrl}}">
+    </image>
+    {{item.text}}
+    <view class="topNavigation__item__unline {{pageIndex === item.index? item.type:''}}"></view>
+  </view>
+</view>
+<swiper class="{{swiperCurrentClass}}" current="{{pageIndex}}" bindchange="handlePageTouch">
+  <swiper-item>
+    <include src="./recommend" />
+  </swiper-item>
+  <swiper-item>
+    <include src="./project" />
+  </swiper-item>
+  <swiper-item>
+    <include src="./path" />
+  </swiper-item>
+  <swiper-item>
+    <include src="./activity" />
+  </swiper-item>
+</swiper>

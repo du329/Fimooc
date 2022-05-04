@@ -1,0 +1,7 @@
+<view class="activities">
+  <view class="activities__item" wx:for="{{activities}}" wx:key="imgUrl">
+    <a href="">
+      <image src="{{item.imgUrl}}"></image>
+    </a>
+  </view>
+</view>

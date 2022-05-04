@@ -1,0 +1,39 @@
+<view class="tpshadow"></view>
+<view class="main">
+  <view class="main__item" wx:for="{{carData}}" wx:key="imgUrl">
+    <movable-area>
+      <movable-view 
+      direction="horizontal" 
+      inertia="{{true}}" 
+      out-of-bounds="{{true}}" 
+      damping="{{60}}" 
+      >
+        <view class="main__item__check" bindtap="handleSuccessTap" data-id="{{item.id}}">
+          <view class="qq" hidden="{{item.checked}}"></view>
+          <icon type="success" hidden="{{!item.checked}}" size="27"></icon>
+        </view>
+        <view class="main__item__img">
+          <image src="{{item.imgUrl}}"></image>
+        </view>
+        <view class="main__item__content">
+          <view class="main__item__content__title">{{item.title}}</view>
+          <view class="main__item__content__msg">
+            <view class="price">￥{{item.price}}</view>
+            <view>{{item.level}}</view>
+          </view>
+        </view>
+        <view class="main__item__del" bindtap="handleDel" data-id="{{item.id}}">删除</view>
+      </movable-view>
+    </movable-area>
+  </view>
+</view>
+
+<view class="settlement">
+  <view class="settlement__check" bindtap="handleSuccessTapAll">
+    <view class="qq" hidden="{{checkAll}}"></view>
+    <icon type="success" hidden="{{!checkAll}}" size="27"></icon>
+    <view class="allCheck">全选</view>
+  </view>
+  <view class="total">合计: ￥{{total}}</view>
+  <view class="settlementBtn">去结算</view>
+</view>

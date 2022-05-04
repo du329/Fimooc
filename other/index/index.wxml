@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container" bindtap="changeName">
+  <block wx:for="{{list}}" wx:key="*this">
+    <view>{{item.day}}</view>
+    <view hidden="{{!item.show}}">{{item.content}}</view>
+  </block>
+</view>
+<view class="container" bindtap="changeName">
+  {{name}}
+</view>
+<view class="container" bindtap="lqsShowModal">
+  showModal
+</view>
+<view class="container" bindtap="lqsSwitchTab">
+  switchTab
+</view>
+<view class="container" bindtap="lqsReqest">
+  <button>request</button>
+</view>

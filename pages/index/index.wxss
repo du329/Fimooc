@@ -1,0 +1,206 @@
+/**index.wxss**/
+
+/* header */
+.header {
+  position: relative;
+  margin: 22rpx auto 14rpx;
+}
+
+.header__input {
+  margin: 0 auto;
+  text-align: center;
+  width: 680rpx;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1rpx solid #D9DDE1;
+  border-radius: 36rpx;
+}
+
+.header__input--pclass {
+  font-size: 26rpx;
+  color: #858585 60%
+}
+
+.header__search {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+/* navigation */
+.topNavigation {
+  display: flex;
+  margin-bottom: 6rpx;
+  height: 112rpx;
+  align-items: center;
+}
+
+.topNavigation__item {
+  position: relative;
+  flex-grow: 1;
+  width: 176rpx;
+  text-align: center;
+  color: #2B333B 100%;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.topNavigation__item--active {
+  transition: all .3s;
+  color: red;
+}
+
+.topNavigation__item__unline {
+  position: absolute;
+  bottom: -30%;
+  left: 52%;
+  height: 8rpx;
+  width: 42rpx;
+  border-radius: 4rpx;
+  transition: all .3s;
+}
+.swiperRecommend{
+  height: 590px;
+}
+.swiperProject{
+  height: 1000px;
+}
+.swiperPath{
+  height: 800px;
+}
+.swiperActivity{
+  height: 850px;
+}
+.recommend{
+  background: #F01414;
+}
+.project{
+  background: #d48e05;
+}
+.path{
+  background: #9447eb;
+}
+.activity{
+  background: #ff5fe4;
+}
+
+.topNavigation__item image {
+  margin-right: 8rpx;
+  width: 36rpx;
+  height: 36rpx;
+  vertical-align: bottom;
+}
+
+/* swiper */
+.swiper {
+  margin-bottom: 32rpx;
+  height: 232rpx;
+  text-align: center;
+}
+
+.swiper__item image {
+  width: 704rpx;
+  height: 232rpx;
+  border-radius: 12rpx;
+}
+
+/* main */
+.main {
+  padding: 0 24rpx;
+}
+
+.main__title {
+  display: block;
+  margin-bottom: 20rpx;
+  padding-left: 16rpx;
+  font-weight: 700;
+  font-size: 28rpx;
+  color: #2B333B;
+}
+
+.main__item {
+  display: flex;
+  margin-bottom: 34rpx;
+  width: 100%;
+  height: 146rpx;
+}
+
+.main__item .main__item__img image {
+  margin-right: 24rpx;
+  width: 208rpx;
+  height: 136rpx;
+  border-radius: 12rpx;
+}
+
+.main__item__content {
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #D9DDE1 100%;
+}
+
+.main__item__content__title {
+  margin-bottom: 14rpx;
+  font-weight: 700;
+  font-size: 32rpx;
+  color: #2B333B;
+}
+
+.main__item__content__msg {
+  display: flex;
+  align-items: center;
+  height: 32rpx;
+  font-size: 24rpx;
+  font-weight: 700;
+  color: #71777D;
+}
+
+.main__item__content__msg view {
+  margin-right: 24rpx;
+}
+
+.main__item__content__msg .price {
+  margin-right: 15rpx;
+  color: red;
+}
+
+.main__item__content__msg .notice {
+  margin-right: 15rpx;
+  padding: 2rpx 8.6rpx;
+  color: red;
+  font-size: 20rpx;
+  border-radius: 4rpx;
+  background: #fde6e6;
+}
+
+.main__item__content__msg .sales {
+  position: relative;
+  padding-left: 32rpx;
+}
+
+.main__item__content__msg .sales image {
+  position: absolute;
+  top: 5rpx;
+  left: 0;
+  width: 32rpx;
+  height: 25rpx;
+}
+
+.empty {
+  margin: 60rpx auto;
+  text-align: center;
+  color: red;
+}
+
+/* 活动模块 */
+.activities{
+  padding: 0 24rpx;
+}
+.activities__item{
+  margin-bottom: 32rpx;
+  width: 702rpx;
+  height: 390rpx;
+}
+.activities__item image{
+  width: 702rpx;
+  height: 390rpx;
+  border-radius: 12rpx;
+}

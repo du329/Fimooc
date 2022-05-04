@@ -1,0 +1,29 @@
+<swiper class="swiper" circular="{{true}}" autoplay="{{1}}" interval="2000" previous-margin="18rpx" next-margin="18rpx">
+  <swiper-item wx:for="{{swiperList}}" wx:key="imgUrl" class="swiper__item">
+    <image src="{{item.imgUrl}}"></image>
+  </swiper-item>
+</swiper>
+<view class="main">
+  <navigator url="/pages/hot/hot">
+    <text class="main__title">实战推荐</text>
+  </navigator>
+  <view class="main__item" wx:for="{{searchList ? searchList:recommend}}" wx:key="id">
+    <view class="main__item__img">
+      <image src="{{item.imgUrl}}"></image>
+    </view>
+    <view class="main__item__content">
+      <view class="main__item__content__title">{{item.title}}</view>
+      <view class="main__item__content__msg">
+        <view wx:if="{{!item.promotion}}">￥{{item.price}}</view>
+        <view wx:if="{{item.promotion}}" class="price">￥{{item.price}}</view>
+        <view wx:if="{{item.promotion}}" class="notice">{{item.notice}}
+        </view>
+        <view class="level">{{item.level}}</view>
+        <view class="sales">
+          <image src="../../resources/user.png"></image>{{item.sales}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{searchList.length === 0}}" class="empty">您搜索的内容不存在!</view>
+</view>

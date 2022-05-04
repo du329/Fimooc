@@ -1,0 +1,31 @@
+<view class="ranking" bindtap="handleRankingState">
+  <view class="ranking__item {{rankingState === item.type ? 'ranking__item--active':''}}" wx:for="{{rankingData}}" wx:key="type" data-type="{{item.type}}">{{item.text}}<view class="{{rankingState === item.type ? 'ranking__item--unline':''}}"></view>
+  </view>
+</view>
+<view class="timeCategory">
+  <view class="timeCategoryBody" bindtap="handleTimeState">
+    <view class="timeCategory__item {{timeState === item.type ? 'timeCategory__item--avtive':''}}" wx:for="{{timeData}}" wx:key="type" data-type="{{item.type}}">
+      {{item.text}}
+    </view>
+  </view>
+</view>
+<view class="dataList">
+  <view class="dataList__item" wx:for="{{dataList}}" wx:key="imgUrl">
+    <view class="dataList__item__img">
+      <image src="{{item.imgUrl}}"></image>
+    </view>
+    <view class="dataList__item__text"><text>{{item.title}}</text></view>
+    <view class="dataList__item__num" wx:if="{{index === 0}}">
+      <image src="../../resources/first.png"></image>
+    </view>
+    <view class="dataList__item__num" wx:elif="{{index === 1}}">
+      <image src="../../resources/second.png"></image>
+    </view>
+    <view class="dataList__item__num" wx:elif="{{index === 2}}">
+      <image src="../../resources/third.png"></image>
+    </view>
+    <view class="dataList__item__Num" wx:else>
+      {{index + 1}}
+    </view>
+  </view>
+</view>
